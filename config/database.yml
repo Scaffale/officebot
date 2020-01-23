@@ -5,16 +5,16 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username:  <%= ENV.fetch("RAILS_DB_USERNAME") { root } %>
-  socket:  <%= ENV.fetch("RAILS_DB_SOCKET") { /tmp/mysql.sock } %>
+  username:  <%= ENV.fetch("RAILS_DB_USERNAME") { 'root' } %>
+  socket:  <%= ENV.fetch("RAILS_DB_SOCKET") { '/tmp/mysql.sock' } %>
   timeout: 5000
 
 development:
   <<: *default
-  password:  <%= ENV.fetch("RAILS_DB_PASSWORD") { root } %>
+  password:  <%= ENV.fetch("RAILS_DB_PASSWORD") { 'root' } %>
   database: db/office_bot_development_mysql
 
 # Warning: The database defined as "test" will be erased and
@@ -23,9 +23,9 @@ development:
 test:
   <<: *default
   database: db/office_bot_test_mysql
-  password:  <%= ENV.fetch("RAILS_DB_PASSWORD") { root } %>
+  password:  <%= ENV.fetch("RAILS_DB_PASSWORD") { 'root' } %>
 
 production:
   <<: *default
   database: db/office_bot_production_mysql
-  password:  <%= ENV.fetch("RAILS_DB_PASSWORD") { root } %>
+  password:  <%= ENV.fetch("RAILS_DB_PASSWORD") { 'root' } %>
