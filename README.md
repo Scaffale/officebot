@@ -12,6 +12,7 @@ The office gif on demand bot for Telegram.
 * Configuration
 
 * Database creation
+
 Insert the info in the `.env.<ENV>` file:
 ```
 RAILS_DB_USERNAME=
@@ -30,4 +31,6 @@ Then:
 
 * Deployment instructions
 
-* ...
+* Development info
+
+Unicorn is running on port 9022, to change it: `config/unicorn.rb`.
