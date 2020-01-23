@@ -70,7 +70,6 @@ group :test do
   gem 'webdrivers'
 
   # Aggiunti a mano
-  gem 'chromedriver-helper'
   gem 'database_cleaner'
   gem 'geckodriver-helper'
   gem 'nyan-cat-formatter'
