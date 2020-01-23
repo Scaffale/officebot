@@ -2,7 +2,9 @@
 The office gif on demand bot for Telegram.
 
 * Ruby version
+
 `ruby 2.7.0`
+
 `rails 6.0.2.1`
 
 * System dependencies
@@ -18,8 +20,8 @@ RAILS_DB_PASSWORD=
 ```
 
 Then:
-
 `rake db:create`
+
 * Database initialization
 
 * How to run the test suite
